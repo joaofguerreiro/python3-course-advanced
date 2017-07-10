@@ -1,0 +1,57 @@
+Help on class redirect_stdout in module contextlib:
+
+class redirect_stdout(_RedirectStream)
+ |  Context manager for temporarily redirecting stdout to another file.
+ |  
+ |  # How to send help() to stderr
+ |  with redirect_stdout(sys.stderr):
+ |      help(dir)
+ |  
+ |  # How to write help() to a file
+ |  with open('help.txt', 'w') as f:
+ |      with redirect_stdout(f):
+ |          help(pow)
+ |  
+ |  Method resolution order:
+ |      redirect_stdout
+ |      _RedirectStream
+ |      AbstractContextManager
+ |      abc.ABC
+ |      builtins.object
+ |  
+ |  Data and other attributes defined here:
+ |  
+ |  __abstractmethods__ = frozenset()
+ |  
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from _RedirectStream:
+ |  
+ |  __enter__(self)
+ |      Return `self` upon entering the runtime context.
+ |  
+ |  __exit__(self, exctype, excinst, exctb)
+ |      Raise any exception triggered within the runtime context.
+ |  
+ |  __init__(self, new_target)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Class methods inherited from AbstractContextManager:
+ |  
+ |  __subclasshook__(C) from abc.ABCMeta
+ |      Abstract classes can override this to customize issubclass().
+ |      
+ |      This is invoked early on by abc.ABCMeta.__subclasscheck__().
+ |      It should return True, False or NotImplemented.  If it returns
+ |      NotImplemented, the normal algorithm is used.  Otherwise, it
+ |      overrides the normal algorithm (and the outcome is cached).
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors inherited from abc.ABC:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+
