@@ -3,9 +3,8 @@ Most context managers that you create will be written such
 that they can only be used once using a with statement.
 The second time we try running it, a RuntimeError is raised.
 
-Example below:
+Examples below.
 """
-
 from contextlib import contextmanager
 @contextmanager
 def single():
